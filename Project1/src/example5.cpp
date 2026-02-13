@@ -1,17 +1,8 @@
 #include <iostream>
 #include <list>
-#include <string>
 #include "example5.h"
 
-void displayList(const std::list<int>& aList)
-{
-	std::string str{};
-	for (int i : aList)
-	{
-		str.append(std::to_string(i)).append(" ");
-	}
-	std::cout << str << std::endl;
-}
+
 
 void example5()
 {
@@ -23,12 +14,12 @@ void example5()
 	int a = 7;
 	std::cout << a << std::endl;
 
-	displayList(myList);
+	displayContainer(myList);
 
 	myList.push_front(a);
 	std::cout << myList.front() << std::endl;
 
-	displayList(myList);
+	displayContainer(myList);
 	
 	myList.push_front(std::move(a));
 	std::cout << myList.front() << std::endl;
@@ -37,33 +28,33 @@ void example5()
 	
 	myList.pop_back();
 
-	displayList(myList);
+	displayContainer(myList);
 
 	auto it = myList.erase(std::next(myList.begin()));
 
-	displayList(myList);
+	displayContainer(myList);
 	std::cout << *it << '\n';
 	
 	auto out = myList.remove(2);
 
-	displayList(myList);
+	displayContainer(myList);
 	std::cout << out << '\n';
 
 	myList.resize(4);
-	displayList(myList);
+	displayContainer(myList);
 
 	myList.splice(myList.cend(), std::list<int>({1, 2, 3, 4}));
-	displayList(myList);
+	displayContainer(myList);
 
 	myList.remove_if([](int a) { return a % 2 == 0; });
-	displayList(myList);
+	displayContainer(myList);
 	
 	myList.sort([](int a, int b) { return a > b; });
-	displayList(myList);
+	displayContainer(myList);
 	
 	myList.reverse();
-	displayList(myList);
+	displayContainer(myList);
 
 	myList.unique();
-	displayList(myList);
+	displayContainer(myList);
 }

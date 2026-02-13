@@ -1,13 +1,14 @@
 #include <iostream>
 #include <algorithm>
 #include <list>
+#include <vector>
 
 #include "example5.h"
 
 void algorithm2()
 {
 	std::list<int> intList{ 1, 3, 6, 3, 5 };
-	displayList(intList);
+	displayContainer(intList);
 
 	bool isAllEven = std::all_of(intList.begin(), intList.end(), [](int n) { return n % 2 == 0; });
 	bool isAnyEven = std::any_of(intList.begin(), intList.end(), [](int n) { return n % 2 == 0; });
@@ -33,5 +34,14 @@ void algorithm2()
 	if (it != intList.end())
 	{
 		std::cout << "Found a number not even! Position = " << std::distance(intList.begin(), it) << '\n';
+	}
+
+	std::vector<int> intVector{ 7, 4, 6 };
+	displayContainer(intVector);
+
+	it = std::find_first_of(intList.begin(), intList.end(), intVector.begin(), intVector.end());
+	if (it != intList.end())
+	{
+		std::cout << "Found a number in List! Position = " << std::distance(intList.begin(), it) << '\n';
 	}
 }
