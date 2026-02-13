@@ -16,10 +16,22 @@ void algorithm2()
 	std::cout << "all even = " << isAllEven << " any even = " << isAnyEven << " none even = " << isNoneEven << '\n';
 
 	auto it = std::find(intList.begin(), intList.end(), 3);
-
 	if (it != intList.end())
 	{
 		std::cout << "Found 3 in the list! Position = " << std::distance(intList.begin(), it) << '\n';
 	}
 
+	auto isEven = [](int n) { return n % 2 == 0; };
+
+	it = std::find_if(intList.begin(), intList.end(), isEven);
+	if (it != intList.end())
+	{
+		std::cout << "Found even number in the list! Position = " << std::distance(intList.begin(), it) << '\n';
+	}
+
+	it = std::find_if_not(intList.begin(), intList.end(), isEven);
+	if (it != intList.end())
+	{
+		std::cout << "Found a number not even! Position = " << std::distance(intList.begin(), it) << '\n';
+	}
 }
