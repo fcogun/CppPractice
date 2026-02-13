@@ -39,3 +39,17 @@
 
 # debug information files
 *.dwo
+
+# vs folder
+.vs/
+
+# user files
+*.user
+
+# build results
+Debug/
+Release/
+x64/
+x86/
+build/
+out/
