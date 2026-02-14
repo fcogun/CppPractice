@@ -16,4 +16,13 @@ void algorithm3()
 
 	auto evenNumCnt = std::count_if(intVector.begin(), intVector.end(), isEven);
 	std::cout << "Number of even nums is: " << evenNumCnt << std::endl;
+
+	std::vector<int> searchVector = { 4, 3, 1 };
+	displayContainer(searchVector);
+
+	auto it = std::search(intVector.begin(), intVector.end(), searchVector.begin(), searchVector.end());
+	if (it != intVector.end())
+	{
+		std::cout << "Found at index: " << std::distance(intVector.begin(), it) << std::endl;
+	}
 }

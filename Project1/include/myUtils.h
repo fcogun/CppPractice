@@ -14,7 +14,7 @@ void displayContainer(const T& aList)
 	std::cout << str << std::endl;
 }
 
-auto isEven = [](int n) { return n % 2 == 0; };
+inline auto isEven = [](int n) { return n % 2 == 0; };
 
 
 void example5();

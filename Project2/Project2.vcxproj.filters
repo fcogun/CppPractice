@@ -13,22 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\non-modifying sequence operations">
+    <Filter Include="Source Files\Modifying Sequence Operations">
+      <UniqueIdentifier>{e7fdd441-6d64-48b5-a304-91eb2e43c0f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Non-modifying Sequence Operations">
       <UniqueIdentifier>{f4de4272-7ca4-481c-97db-9bdbf0657e6e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\algorithm1.cpp">
-      <Filter>Source Files\non-modifying sequence operations</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files\non-modifying sequence operations</Filter>
+      <Filter>Source Files\Non-modifying Sequence Operations</Filter>
     </ClCompile>
     <ClCompile Include="src\algorithm2.cpp">
-      <Filter>Source Files\non-modifying sequence operations</Filter>
+      <Filter>Source Files\Non-modifying Sequence Operations</Filter>
     </ClCompile>
     <ClCompile Include="src\algorithm3.cpp">
-      <Filter>Source Files\non-modifying sequence operations</Filter>
+      <Filter>Source Files\Non-modifying Sequence Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="src\algorithm4.cpp">
+      <Filter>Source Files\Modifying Sequence Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
