@@ -17,10 +17,14 @@ void algorithm4()
 	displayContainer(v);
 	displayContainer(cp);
 
-	std::list<int> cp2;
 
-	std::move(v.begin(), v.end(), std::back_inserter(cp2));
+	std::vector<std::string> v2{ "leyla", "fuat", "tugce" };
+	std::list<std::string> cp2;
+
+	displayContainer(v2);
 	displayContainer(cp2);
-	displayContainer(v);
+	std::move(v2.begin(), v2.end(), std::back_inserter(cp2));
+	displayContainer(v2);
+	displayContainer(cp2);
 
 }
