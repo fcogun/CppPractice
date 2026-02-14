@@ -2,13 +2,13 @@
 #include <chrono>
 #include <iostream>
 
-void algorithm2();
+void algorithm3();
 
 int main()
 {
 
 	auto start = std::chrono::system_clock::now();
-	algorithm2();
+	algorithm3();
 	auto end = std::chrono::system_clock::now();
 
 	auto duration = end - start;

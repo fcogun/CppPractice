@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="src\algorithm1.cpp" />
     <ClCompile Include="src\algorithm2.cpp" />
+    <ClCompile Include="src\algorithm3.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>

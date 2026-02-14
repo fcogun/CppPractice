@@ -3,7 +3,7 @@
 #include <list>
 #include <vector>
 
-#include "example5.h"
+#include "myUtils.h"
 
 void algorithm2()
 {
@@ -21,8 +21,6 @@ void algorithm2()
 	{
 		std::cout << "Found 3 in the list! Position = " << std::distance(intList.begin(), it) << '\n';
 	}
-
-	auto isEven = [](int n) { return n % 2 == 0; };
 
 	it = std::find_if(intList.begin(), intList.end(), isEven);
 	if (it != intList.end())

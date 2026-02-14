@@ -47,7 +47,7 @@
     <ClInclude Include="include\example2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\example5.h">
+    <ClInclude Include="include\myUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

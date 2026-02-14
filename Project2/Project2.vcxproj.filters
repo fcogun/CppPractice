@@ -27,6 +27,9 @@
     <ClCompile Include="src\algorithm2.cpp">
       <Filter>Source Files\non-modifying sequence operations</Filter>
     </ClCompile>
+    <ClCompile Include="src\algorithm3.cpp">
+      <Filter>Source Files\non-modifying sequence operations</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\algorithm1.h">
