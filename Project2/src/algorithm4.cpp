@@ -57,4 +57,17 @@ void algorithm4()
 	res.unique();
 	displayContainer(res);
 
+	std::vector<char> charVector{ 'b', 'v', 'a', 'c', 'z' };
+
+	std::sort(charVector.begin(), charVector.end());
+	displayContainer(charVector);
+
+	std::sort(charVector.begin(), charVector.end(), std::greater<>());
+	displayContainer(charVector);
+
+	std::stable_sort(charVector.begin(), charVector.end());
+	displayContainer(charVector);
+
+	std::stable_sort(charVector.begin(), charVector.end(), std::greater<char>{});
+	displayContainer(charVector);
 }
