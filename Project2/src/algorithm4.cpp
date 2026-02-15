@@ -42,5 +42,19 @@ void algorithm4()
 	std::replace_if(res.begin(), res.end(), [](int a) { return a < 16; }, 1);
 	displayContainer(res);
 
+	std::fill_n(std::back_inserter(res), 5, 3);
+	displayContainer(res);
 	
+	res.erase(std::remove(res.begin(), res.end(), 66), res.end());
+	displayContainer(res);
+
+	res.push_back(4);
+	res.push_back(3);
+
+	displayContainer(res);
+
+	res.sort();
+	res.unique();
+	displayContainer(res);
+
 }
