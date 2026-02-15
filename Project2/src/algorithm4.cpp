@@ -35,5 +35,12 @@ void algorithm4()
 	std::transform(v.begin(), std::next(v.begin(),std::min(v3.size(),v.size())), v3.begin(), std::back_inserter(res), [](int a, int b) {return a + b; });
 
 	displayContainer(res);
+
+	std::replace(res.begin(), res.end(), 16, 66);
+	displayContainer(res);
+
+	std::replace_if(res.begin(), res.end(), [](int a) { return a < 16; }, 1);
+	displayContainer(res);
+
 	
 }
