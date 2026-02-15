@@ -27,4 +27,13 @@ void algorithm4()
 	displayContainer(v2);
 	displayContainer(cp2);
 
+	std::transform(v.begin(), v.end(), v.begin(), [](int n) { return 2 * n; });
+	displayContainer(v);
+
+	std::vector<int> v3(4, 10);
+	std::list<int> res;
+	std::transform(v.begin(), std::next(v.begin(),std::min(v3.size(),v.size())), v3.begin(), std::back_inserter(res), [](int a, int b) {return a + b; });
+
+	displayContainer(res);
+	
 }
