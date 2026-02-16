@@ -85,5 +85,11 @@ void algorithm4()
 	std::cout << "v is fully sorted: " << fullySorted
 		<< " v is partially sorted : " << partiallySorted << '\n';
 
+	v = { 1, 3, 45, 11, 34, 54, 7, 8,2, 2, 23, 2,4 ,5 , 6, 55, 232 , 5 , 10 , 3 , 5 , 6, 4, 12, 445, 12, 45,234, 1,4 ,5, 6, 3, 6, 3, 6, 7,3, 5,2 };
+	displayContainer(v);
 
+	auto pivot = v.begin() + 2;
+	std::nth_element(v.begin(), pivot, v.end(), std::greater());
+
+	displayContainer(v);
 }
