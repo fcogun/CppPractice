@@ -32,7 +32,7 @@ void algorithm4()
 
 	std::vector<int> v3(4, 10);
 	std::list<int> res;
-	std::transform(v.begin(), std::next(v.begin(),std::min(v3.size(),v.size())), v3.begin(), std::back_inserter(res), [](int a, int b) {return a + b; });
+	std::transform(v.begin(), std::next(v.begin(), std::min(v3.size(), v.size())), v3.begin(), std::back_inserter(res), [](int a, int b) {return a + b; });
 
 	displayContainer(res);
 
@@ -44,7 +44,7 @@ void algorithm4()
 
 	std::fill_n(std::back_inserter(res), 5, 3);
 	displayContainer(res);
-	
+
 	res.erase(std::remove(res.begin(), res.end(), 66), res.end());
 	displayContainer(res);
 
@@ -71,13 +71,19 @@ void algorithm4()
 	std::stable_sort(charVector.begin(), charVector.end(), std::greater<char>{});
 	displayContainer(charVector);
 
-	v={ 1, 3, 4,5,6 ,7,8,4 };
+	v = { 1, 3, 4,5,6 ,7,8,4 };
 
 	std::partial_sort(v.begin(), v.begin() + 4, v.end());
 	displayContainer(v);
-	
+
 	std::partial_sort(v.begin(), v.begin() + 4, v.end(), std::greater<>());
 	displayContainer(v);
+
+	bool fullySorted = std::is_sorted(v.begin(), v.end());
+	bool partiallySorted = std::is_sorted(v.begin(), v.begin() + 4, std::greater<>());
+
+	std::cout << "v is fully sorted: " << fullySorted
+		<< " v is partially sorted : " << partiallySorted << '\n';
 
 
 }
