@@ -70,4 +70,14 @@ void algorithm4()
 
 	std::stable_sort(charVector.begin(), charVector.end(), std::greater<char>{});
 	displayContainer(charVector);
+
+	v={ 1, 3, 4,5,6 ,7,8,4 };
+
+	std::partial_sort(v.begin(), v.begin() + 4, v.end());
+	displayContainer(v);
+	
+	std::partial_sort(v.begin(), v.begin() + 4, v.end(), std::greater<>());
+	displayContainer(v);
+
+
 }
