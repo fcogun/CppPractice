@@ -92,4 +92,23 @@ void algorithm4()
 	std::nth_element(v.begin(), pivot, v.end(), std::greater());
 
 	displayContainer(v);
+
+#pragma region BinarySearchOperations
+
+	std::sort(v.begin(), v.end());
+	displayContainer(v);
+
+	auto lowIt = std::lower_bound(v.begin(), v.end(), 9);
+	auto upperIt = std::upper_bound(v.begin(), v.end(), 9);
+
+	std::cout << std::distance(v.begin(), lowIt) << ' ' << std::distance(v.begin(), upperIt) << std::endl;
+
+	std::cout << "binary search that 20 exists: " << std::binary_search(v.begin(), v.end(), 20) << '\n';
+
+	auto [stIt, endIt] = std::equal_range(v.begin(), v.end(), 5);
+
+	std::cout << std::distance(v.begin(), stIt) << ' ' << std::distance(v.begin(), endIt) << std::endl;
+
+#pragma endregion
+
 }
