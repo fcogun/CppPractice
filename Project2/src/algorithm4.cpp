@@ -9,6 +9,11 @@
 
 void algorithm4()
 {
+
+#pragma region CopyMoveTransform
+
+	std::cout << '\n' << "=== Copy/Move/Transform Operations ===" << '\n';
+
 	std::vector<int> v{ 1, 3, 4,5,6 ,7,8,4 };
 
 	std::vector<int> cp;
@@ -42,6 +47,13 @@ void algorithm4()
 	std::replace_if(res.begin(), res.end(), [](int a) { return a < 16; }, 1);
 	displayContainer(res);
 
+#pragma endregion
+
+#pragma region RemoveOperations
+
+	std::cout << '\n' << "=== Remove Operations ===" << '\n';
+
+
 	std::fill_n(std::back_inserter(res), 5, 3);
 	displayContainer(res);
 
@@ -52,6 +64,13 @@ void algorithm4()
 	res.push_back(3);
 
 	displayContainer(res);
+
+#pragma endregion
+
+
+#pragma region SortingOperations
+
+	std::cout << '\n' << "=== Sorting Operations ===" << '\n';
 
 	res.sort();
 	res.unique();
@@ -93,7 +112,11 @@ void algorithm4()
 
 	displayContainer(v);
 
+#pragma endregion
+
 #pragma region BinarySearchOperations
+
+	std::cout << '\n' << "=== Binary Search Operations ===" << '\n';
 
 	std::sort(v.begin(), v.end());
 	displayContainer(v);
