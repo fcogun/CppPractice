@@ -134,4 +134,31 @@ void algorithm4()
 
 #pragma endregion
 
+#pragma region HeapOperations
+
+	std::cout << '\n' << "=== Heap Operations ===" << '\n';
+
+	v = { 1, 3, 5, 6, 2, 2, 5,3, 7, 7,2, 2,4,5,6773,2,5,25,1,51,5 };
+	displayContainer(v);
+
+	std::cout << "Make the heap: \n";
+	std::make_heap(v.begin(), v.end());
+	displayContainer(v);
+
+	std::cout << "Push back value to vector & call std::push_heap: \n";
+	v.push_back(217217);
+	std::push_heap(v.begin(), v.end());
+	displayContainer(v);
+
+	std::cout << "Call std::pop_heap & pop back value from container : \n";
+	std::pop_heap(v.begin(), v.end());
+	v.pop_back();
+	displayContainer(v);
+
+	std::cout << "Check if v is still a heap after operations: \n";
+	std::cout << "is heap -> " << std::is_heap(v.begin(), v.end());
+
+#pragma endregion
+
+
 }
