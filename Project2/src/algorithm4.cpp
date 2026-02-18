@@ -5,6 +5,7 @@
 
 
 #include "myUtils.h"
+#include <cassert>
 
 
 void algorithm4()
@@ -177,5 +178,20 @@ void algorithm4()
 
 #pragma endregion
 
+#pragma region PermutationOperations
+
+	std::cout << '\n' << "=== Permutation Operations ===" << '\n';
+
+	std::vector<int> pVec{ 1, 2, 3, 4 };
+	auto org{ pVec };
+
+	do
+	{
+		displayContainer(pVec);
+	} while (std::next_permutation(pVec.begin(), pVec.end()));
+	
+	
+	std::cout << (std::is_permutation(org.begin(), org.end(), pVec.begin()) ? "is permutation" : "not permutation") << '\n';
+#pragma endregion
 
 }
