@@ -156,7 +156,24 @@ void algorithm4()
 	displayContainer(v);
 
 	std::cout << "Check if v is still a heap after operations: \n";
-	std::cout << "is heap -> " << std::is_heap(v.begin(), v.end());
+	std::cout << "is heap -> " << std::is_heap(v.begin(), v.end()) << '\n';
+
+#pragma endregion
+
+#pragma region Min/MaxOperations
+
+	std::cout << '\n' << "=== Min/Max Operations ===" << '\n';
+
+	auto itToMin = std::min_element(v.begin(), v.end());
+	auto itToMax = std::max_element(v.begin(), v.end());
+
+	std::cout << "Min element in v is : " << *itToMin << " at pos : " << std::distance(v.begin(), itToMin) << '\n'
+			  << "Max element in v is : " << *itToMax << " at pos : " << std::distance(v.begin(), itToMax) << '\n';
+
+	auto [itMin, itMax] = std::minmax_element(v.begin(), v.end());
+
+	assert(itToMin == itMin);
+	assert(itToMax == itMax);
 
 #pragma endregion
 
