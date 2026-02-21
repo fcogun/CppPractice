@@ -1,16 +1,8 @@
 #include <iostream>
 #include <memory>
+#include <queue>
 
 #include "BinaryTree.h"
-
-struct Node
-{
-	Node(int key) :data(key),left(nullptr),right(nullptr) {}
-
-	int data;
-	Node* left;
-	Node* right;
-};
 
 
 Node* buildTree()
@@ -25,7 +17,7 @@ Node* buildTree()
 	return root;
 }
 
-void printPreorder(Node* root)
+void printPreorder(const Node* root)
 {
 	if (!root)
 		return;
@@ -35,7 +27,7 @@ void printPreorder(Node* root)
 	printPreorder(root->right);
 }
 
-void printInorder(Node* root)
+void printInorder(const Node* root)
 {
 	if (!root)
 		return;
@@ -45,7 +37,7 @@ void printInorder(Node* root)
 	printInorder(root->right);
 }
 
-void printPostorder(Node* root)
+void printPostorder(const Node* root)
 {
 	if (!root)
 		return;
@@ -55,3 +47,24 @@ void printPostorder(Node* root)
 	std::cout << root->data << ' ';
 }
 
+void printBFS(const Node* root)
+{
+	if (!root)
+		return;
+
+	std::queue<const Node*> q;
+	q.push(root);
+
+	while (!q.empty())
+	{
+		const Node* currentNode = q.front();
+		q.pop();
+		std::cout << currentNode->data << ' ';
+
+		if (currentNode->left)
+			q.push(currentNode->left);
+		if (currentNode->right)
+			q.push(currentNode->right);
+	}
+	std::cout << std::endl;
+}
