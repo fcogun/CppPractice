@@ -25,14 +25,19 @@ int main()
 
 #pragma region Binary Search Tree
 
-	BinarySearchTree bst{};
+	root = buildBinaryTree();
+	root = insert(root, 5);
+	root = insert(root, 8);
+	root = insert(root, 12);
 
-	bst.insert(7);
-	bst.insert(2);
-	bst.insert(8);
-	bst.insert(10);
 
-	bst.inOrder();
+	std::cout << "\n BFS traversal: \n";
+	printBFS(root);
 
+	std::cout << "\n In order traversal: \n";
+	printInorder(root);
+
+	Node* foundNode = search(root, 6);
+	std::cout << '\n' << (foundNode ? "Found! " : "Not found :(") << std::endl;
 #pragma endregion
 }
