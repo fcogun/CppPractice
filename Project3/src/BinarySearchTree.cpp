@@ -3,7 +3,8 @@
 #include "BinaryTree.h"
 #include <iostream>
 
-Node* buildBinaryTree() 
+
+Node* buildBinaryTree()
 {
 	Node* root = new Node(10);
 	root->left = new Node(5);
@@ -40,4 +41,42 @@ Node* search(Node* root, int key)
 		return search(root->left, key);
 	else
 		return search(root->right, key);
+}
+
+
+Node* findMin(Node* root)
+{
+	if (!root)
+		return nullptr;
+
+	while (root->left)
+	{
+		root = root->left;
+	}
+	return root;
+}
+
+
+Node* findMax(Node* root)
+{
+	if (!root)
+		return nullptr;
+
+	while (root->right)
+	{
+		root = root->right;
+	}
+	return root;
+}
+
+
+bool isValidBST(Node* root, int min, int max)
+{
+	if (!root)
+		return true;
+
+	if (root->data < min || root->data > max)
+		return false;
+
+	return isValidBST(root->left, min, root->data) && isValidBST(root->right, root->data, max);
 }

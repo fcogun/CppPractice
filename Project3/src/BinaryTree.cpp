@@ -65,5 +65,4 @@ void printBFS(const Node* root)
 		if (currentNode->right)
 			q.push(currentNode->right);
 	}
-	std::cout << std::endl;
 }
