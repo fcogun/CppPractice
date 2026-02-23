@@ -15,4 +15,8 @@ Node* findMax(Node* root);
 
 bool isValidBST(Node* root, int min, int max);
 
+int kthSmallest(Node* root, int k);
+
+Node* findBstLCA(Node* root, int key1, int key2); // Least Common Ancestor for BST
+
 

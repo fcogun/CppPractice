@@ -12,3 +12,4 @@ void printPostorder(const Node* root);
 
 void printBFS(const Node* root);
 
+Node* findLCA(Node* root, int key1, int key2); // Least Common Ancestor

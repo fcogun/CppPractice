@@ -80,3 +80,38 @@ bool isValidBST(Node* root, int min, int max)
 
 	return isValidBST(root->left, min, root->data) && isValidBST(root->right, root->data, max);
 }
+
+
+int kthSmallestR(Node* root, int& k)
+{
+	if (!root)
+		return -1;
+
+	int left = kthSmallestR(root->left, k);
+
+	if (left != -1)
+		return left;
+
+	if (--k == 0)
+		return root->data;
+
+	return kthSmallestR(root->right, k);
+}
+
+int kthSmallest(Node* root, int k)
+{
+	return kthSmallestR(root, k);
+}
+
+Node* findBstLCA(Node* root, int key1, int key2)
+{
+	if (!root)
+		return nullptr;
+
+	if (root->data > key1 && root->data > key2)
+		return findBstLCA(root->left, key1, key2);
+	else if (root->data < key1 && root->data < key2)
+		return findBstLCA(root->right, key1, key2);
+
+	return root;
+}

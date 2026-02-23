@@ -66,3 +66,20 @@ void printBFS(const Node* root)
 			q.push(currentNode->right);
 	}
 }
+
+Node* findLCA(Node* root, int key1, int key2)
+{
+	if (!root)
+		return nullptr;
+
+	if (root->data == key1 || root->data == key2)
+		return root;
+
+	Node* left = findLCA(root->left, key1, key2);
+	Node* right = findLCA(root->right, key1, key2);
+
+	if (left && right)
+		return root;
+
+	return left ? left : right;
+}
