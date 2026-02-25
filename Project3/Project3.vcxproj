@@ -144,10 +144,12 @@
     <ClCompile Include="src\BinarySearchTree.cpp" />
     <ClCompile Include="src\BinaryTree.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MaxHeap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\BinarySearchTree.h" />
     <ClInclude Include="include\BinaryTree.h" />
+    <ClInclude Include="include\MaxHeap.h" />
     <ClInclude Include="include\Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

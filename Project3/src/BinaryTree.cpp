@@ -65,6 +65,7 @@ void printBFS(const Node* root)
 		if (currentNode->right)
 			q.push(currentNode->right);
 	}
+	std::cout << '\n';
 }
 
 Node* findLCA(Node* root, int key1, int key2)

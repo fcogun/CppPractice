@@ -115,3 +115,50 @@ Node* findBstLCA(Node* root, int key1, int key2)
 
 	return root;
 }
+
+Node* sortedToBST(const std::vector<int>& arr, int start, int end)
+{
+	if (start > end)
+		return nullptr;
+
+	int mid = start + (end - start) / 2;
+
+	Node* node = new Node(arr[mid]);
+
+	node->left = sortedToBST(arr, start, mid - 1);
+	node->right = sortedToBST(arr, mid + 1, end);
+
+	return node;
+}
+
+
+Node* sortedToBST(const std::vector<int>& arr)
+{
+	if (arr.empty())
+		return nullptr;
+
+	return sortedToBST(arr, 0, static_cast<int>(arr.size()) - 1);
+}
+
+void BSTtoSorted(std::vector<int>& sortedVector, Node* root)
+{
+	if (!root)
+		return;
+
+	BSTtoSorted(sortedVector, root->left);
+
+	sortedVector.push_back(root->data);
+
+	BSTtoSorted(sortedVector, root->right);
+}
+
+
+std::vector<int> BSTtoSorted(Node* root)
+{
+	std::vector<int> sortedVector{};
+	
+	BSTtoSorted(sortedVector, root);
+
+	return sortedVector;
+}
+

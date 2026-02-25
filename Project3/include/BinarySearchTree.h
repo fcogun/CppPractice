@@ -1,5 +1,6 @@
 #pragma once
 
+#include <vector>
 #include "Node.h"
 
 
@@ -19,4 +20,7 @@ int kthSmallest(Node* root, int k);
 
 Node* findBstLCA(Node* root, int key1, int key2); // Least Common Ancestor for BST
 
+Node* sortedToBST(const std::vector<int>& arr);
+
+std::vector<int> BSTtoSorted(Node* root);
 
