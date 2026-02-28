@@ -41,5 +41,8 @@
     <ClInclude Include="include\MaxHeap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

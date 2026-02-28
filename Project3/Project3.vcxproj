@@ -151,6 +151,7 @@
     <ClInclude Include="include\BinaryTree.h" />
     <ClInclude Include="include\MaxHeap.h" />
     <ClInclude Include="include\Node.h" />
+    <ClInclude Include="include\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
