@@ -3,6 +3,10 @@
 #include "BinaryTree.h"
 #include "BinarySearchTree.h"
 #include "MaxHeap.h"
+#include "Graph.h"
+#include "myUtils.h"
+
+
 
 int main()
 {
@@ -99,6 +103,33 @@ int main()
 		std::cout << h.top() << " ";
 		h.pop();
 	}
+#pragma endregion
+
+#pragma region Graph operations
+
+	std::cout << '\n' << "=== Graph Operations ===" << '\n';
+
+	Graph g(5);
+
+	g.addEdge(0, 1);
+	g.addEdge(1, 2);
+	g.addEdge(2, 4);
+	g.addEdge(1, 4);
+	g.addEdge(0, 4);
+
+	g.dispAdjacencies();
+
+	g.bfs(1);
+
+	g.dfs(1);
+
+	int count = g.countComponents();
+	std::cout << count << std::endl;
+
+	//shortest path from node vector:
+	std::vector<int> dist = g.shortestPath(1);
+	displayContainer(dist);
+
 #pragma endregion
 
 }

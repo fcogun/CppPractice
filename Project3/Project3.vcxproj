@@ -117,7 +117,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Project1\include;$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,6 +141,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Dijkstra.cpp" />
+    <ClCompile Include="src\Graph.cpp" />
     <ClCompile Include="src\BinarySearchTree.cpp" />
     <ClCompile Include="src\BinaryTree.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -149,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="include\BinarySearchTree.h" />
     <ClInclude Include="include\BinaryTree.h" />
+    <ClInclude Include="include\Graph.h" />
     <ClInclude Include="include\MaxHeap.h" />
     <ClInclude Include="include\Node.h" />
     <ClInclude Include="include\Singleton.h" />
