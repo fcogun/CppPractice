@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Non-modifying Sequence Operations">
       <UniqueIdentifier>{f4de4272-7ca4-481c-97db-9bdbf0657e6e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Sorting Algorithms">
+      <UniqueIdentifier>{32f06461-8bb7-4f25-bc8e-4c0a970a5e25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\algorithm1.cpp">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="src\algorithm5.cpp">
       <Filter>Source Files\Modifying Sequence Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SortingAlgorithms.cpp">
+      <Filter>Source Files\Sorting Algorithms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

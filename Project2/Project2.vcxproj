@@ -153,6 +153,7 @@
     <ClCompile Include="src\algorithm4.cpp" />
     <ClCompile Include="src\algorithm5.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SortingAlgorithms.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\algorithm1.h" />
