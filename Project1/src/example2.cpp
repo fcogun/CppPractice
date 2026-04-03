@@ -1,6 +1,8 @@
-#include <iostream>
-#include <array>
 #include "example2.h"
+
+#include <array>
+#include <iostream>
+
 
 void example2()
 {

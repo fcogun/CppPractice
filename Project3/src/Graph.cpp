@@ -1,8 +1,8 @@
 #include "Graph.h"
 
-#include <vector>
-#include <queue>
 #include <iostream>
+#include <queue>
+#include <vector>
 
 void Graph::dispAdjacencies()
 {

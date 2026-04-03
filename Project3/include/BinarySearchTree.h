@@ -1,8 +1,8 @@
 #pragma once
 
 #include <vector>
-#include "Node.h"
 
+struct Node;
 
 Node* buildBinaryTree();
 

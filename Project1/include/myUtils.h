@@ -1,6 +1,4 @@
 #pragma once
-#include <list>
-#include <string>
 
 
 template <typename T>
@@ -14,6 +12,5 @@ void displayContainer(const T& aList)
 }
 
 inline auto isEven = [](int n) { return n % 2 == 0; };
-
 
 void example5();

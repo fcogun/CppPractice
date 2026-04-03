@@ -1,8 +1,7 @@
-
-#include <iostream>
-#include <stack>
-#include <queue>
 #include <cassert>
+#include <iostream>
+#include <queue>
+#include <stack>
 
 
 void displayQueue(std::priority_queue<int> aQueue)

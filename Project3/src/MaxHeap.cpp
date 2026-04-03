@@ -1,4 +1,5 @@
 #include "MaxHeap.h"
+
 #include <stdexcept>
 
 void MaxHeap::heapifyUp(int index)

@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "BinaryTree.h"
 #include "BinarySearchTree.h"
-#include "MaxHeap.h"
+#include "BinaryTree.h"
 #include "Graph.h"
+#include "MaxHeap.h"
 #include "myUtils.h"
 
 

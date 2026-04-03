@@ -1,5 +1,7 @@
-﻿#include <iostream>
-#include "example1.h"
+﻿#include "example1.h"
+
+#include <iostream>
+
 
 int sum(int arr[], int size)
 {
@@ -45,7 +47,5 @@ void example1()
 
     std::cout << sum(arr, arrSize) << std::endl; 
 }
-
-// requriments : 
 
 

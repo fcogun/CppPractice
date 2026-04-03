@@ -1,5 +1,5 @@
-#include <vector>
 #include <queue>
+#include <vector>
 
 
 std::vector<int> dijkstra(int start, const std::vector<std::vector<std::pair<int, int>>>& adj)

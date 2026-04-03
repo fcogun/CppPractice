@@ -1,8 +1,9 @@
-#include <iostream>
-#include <algorithm>
-
 #include "algorithm1.h"
+
+#include <algorithm>
+#include <iostream>
 #include <vector>
+
 
 struct Sum
 {

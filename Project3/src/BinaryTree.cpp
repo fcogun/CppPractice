@@ -1,7 +1,10 @@
+#include "BinaryTree.h"
+
 #include <iostream>
 #include <queue>
 
-#include "BinaryTree.h"
+#include "Node.h"
+
 
 
 Node* buildTree()

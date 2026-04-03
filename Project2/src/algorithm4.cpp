@@ -1,11 +1,10 @@
-#include <iostream>
 #include <algorithm>
-#include <vector>
+#include <cassert>
 #include <functional>
-
+#include <iostream>
+#include <vector>
 
 #include "myUtils.h"
-#include <cassert>
 
 
 void algorithm4()

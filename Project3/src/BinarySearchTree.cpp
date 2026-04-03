@@ -1,7 +1,9 @@
 #include "Node.h"
+
+#include <iostream>
+
 #include "BinarySearchTree.h"
 #include "BinaryTree.h"
-#include <iostream>
 
 
 Node* buildBinaryTree()

@@ -1,9 +1,11 @@
+#include <algorithm>
 #include <iostream>
-#include <vector>
 #include <numeric>
+#include <string>
+#include <vector>
 
 #include "myUtils.h"
-#include <algorithm>
+
 
 void algorithm5()
 {
