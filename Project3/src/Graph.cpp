@@ -86,6 +86,54 @@ int Graph::countComponents()
 	return count;
 }
 
+
+std::vector<int> Graph::topologicalSort()
+{
+	std::vector<int> indegree(V, 0);
+
+	// compute indegree
+	for (int v = 0; v < V; ++v)
+	{
+		for (int n : adj[v])
+		{
+			indegree[n]++;
+		}
+	}
+
+	std::queue<int> q;
+
+	// push nodes with 0 indegree
+	for (int v = 0; v < V; ++v)
+	{
+		if (indegree[v] == 0)
+		{
+			q.push(v);
+		}
+	}
+
+	std::vector<int> result;
+
+	while (!q.empty())
+	{
+		int node = q.front(); 
+		q.pop();
+
+		result.push_back(node);
+
+		for (int n : adj[node])
+		{
+			indegree[n]--;
+			if (indegree[n] == 0)
+			{
+				q.push(n);
+			}
+		}
+	}
+
+	return result;
+}
+
+
 std::vector<int> Graph::shortestPath(int node)
 {
 	std::vector<int> dist(V, INT_MAX);

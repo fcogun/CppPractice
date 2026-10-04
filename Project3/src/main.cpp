@@ -5,6 +5,7 @@
 #include "Graph.h"
 #include "MaxHeap.h"
 #include "myUtils.h"
+#include "Node.h"
 
 
 
@@ -130,6 +131,23 @@ int main()
 	std::vector<int> dist = g.shortestPath(1);
 	displayContainer(dist);
 
+	Graph dac(6, true);
+
+	// 2 -> 3 -> 1
+	// ^         ^
+	// |	     |
+	// 5 -> 0 <- 4 
+
+	dac.addEdge(2, 3);
+	dac.addEdge(3, 1);
+	dac.addEdge(4, 0);
+	dac.addEdge(4, 1);
+	dac.addEdge(5, 2);
+	dac.addEdge(5, 0);
+
+	dac.dispAdjacencies();
+
+	displayContainer(dac.topologicalSort());
 #pragma endregion
 
 }
