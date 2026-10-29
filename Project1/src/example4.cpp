@@ -4,7 +4,7 @@
 
 void example4()
 {
-	std::string myStr{ "fuat" };
+	std::string myStr("fuat");
 
 	std::cout << myStr[2] << std::endl;
 

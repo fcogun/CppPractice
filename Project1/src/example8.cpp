@@ -19,7 +19,7 @@ void example8()
 
 	myMap.insert({ 4,"leyla" });
 
-	myMap.emplace(5, "katia");
+	myMap.emplace(5, "mario");
 
 
 	displayMap(myMap);

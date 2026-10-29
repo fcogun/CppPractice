@@ -7,7 +7,7 @@
 void example2()
 {
 
-    std::array<int, 5> arr = { 1,2,3,4 };
+    std::array<int, 5> arr = { 1,3,6,8 };
     
     try
     {
@@ -24,12 +24,12 @@ void example2()
     std::cout << arr.at(1) << std::endl;
     
      
-    std::cout << arr.at(1) << std::endl;
+    std::cout << arr.at(3) << std::endl;
     
     std::cout << pa << std::endl;
     std::cout << *pa << std::endl;
-    std::cout << *pa + 1 << std::endl;
-    std::cout << *(pa + 1) << std::endl;
+    std::cout << *pa + 2 << std::endl;
+    std::cout << *(pa + 2) << std::endl;
 
     for (auto it = arr.rbegin(); it < arr.rend(); ++it)
     {
